@@ -1,4 +1,4 @@
-# Behavior
+# Behavior Pattern
 
 아이템, 몬스터, 캐릭터 등 다양한 고유 효과를 구현하기 위한 베이스 클래스이다.
 
