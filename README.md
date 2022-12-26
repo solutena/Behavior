@@ -65,11 +65,8 @@ public class Item_Sword : ItemBehavior
 ```
 void Start()
 {
-  string key = nameof(Item_Sword);
-  ItemBehavior Sword = ItemBehavior.Get(key);
+  ItemBehavior Sword = ItemBehavior.Get<Item_Sword>();
 }
 ```
 
-예제의 아이템은 `ItemBehavior.Get` 함수로 가져올 수 있다.
-
-클래스 이름이 키 이므로 이름 변경에 대응할 수 있도록 `nameof` 를 사용한다.
+예제의 아이템은 `ItemBehavior.Get<>()` 함수로 가져올 수 있다.
