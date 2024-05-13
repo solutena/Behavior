@@ -69,4 +69,4 @@ void Start()
 }
 ```
 
-예제의 아이템은 `ItemBehavior.Get<>()` 함수로 가져올 수 있습니다.
+예제의 아이템은 `ItemBehavior.Get<T>()` 함수로 가져올 수 있습니다.
