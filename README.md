@@ -1,8 +1,8 @@
-# Behavior Pattern
+# Behaviour Pattern
 
 아이템, 몬스터, 캐릭터 등 다양한 고유 효과를 구현하기 위한 디자인 패턴입니다.
 
-`Behavior<T>` 클래스를 상속하며
+`Behaviour<T>` 클래스를 상속하며
 
 키를 통해 클래스를 가져올 수 있고, 클래스 이름이 키가 됩니다.
 
@@ -27,7 +27,7 @@ public enum ItemType
   Armor
 }
 
-public abstract class ItemBehavior : Behavior<ItemBehavior>
+public abstract class ItemBehaviour : Behaviour<ItemBehaviour>
 {
   public abstract ItemGrade ItemGrade { get; }
   public abstract ItemType ItemType { get; }
@@ -46,7 +46,7 @@ public abstract class ItemBehavior : Behavior<ItemBehavior>
 변경되지 않을 멤버는 키워드 없이 구현합니다.
 
 ```
-public class Item_Sword : ItemBehavior
+public class Item_Sword : ItemBehaviour
 {
   public override ItemGrade ItemGrade { get; } = ItemGrade.Normal;
   public override ItemType ItemType { get; } = ItemType.Weapon;
@@ -65,8 +65,8 @@ public class Item_Sword : ItemBehavior
 ```
 void Start()
 {
-  ItemBehavior Sword = ItemBehavior.Get<Item_Sword>();
+  ItemBehaviour Sword = ItemBehaviour.Get<Item_Sword>();
 }
 ```
 
-예제의 아이템은 `ItemBehavior.Get<T>()` 함수로 가져올 수 있습니다.
+예제의 아이템은 `ItemBehaviour.Get<T>()` 함수로 가져올 수 있습니다.
