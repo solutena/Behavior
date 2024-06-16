@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 
-public class Behavior<T> where T : Behavior<T>
+public class Behaviour<T> where T : Behaviour<T>
 {
 	static Dictionary<string, T> Dictionary { get; set; } = new Dictionary<string, T>();
 	public string Key { get; set; }
-	public static T Get<B>() where B : Behavior<T> => Get(typeof(B).FullName);
-	public static T Get(string key)
+	public static T Get<B>() where B : Behaviour<T>
 	{
+		string key = typeof(B).FullName;
 		if (Dictionary.ContainsKey(key))
 			return Dictionary[key];
 		else
